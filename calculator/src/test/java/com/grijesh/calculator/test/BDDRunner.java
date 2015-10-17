@@ -10,8 +10,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = {"pretty", "json:target/"},
+        monochrome = true,
         features = "src/test/resources/features/",
+        plugin = {"pretty", "json:target/"},
         dryRun = false,
         glue = "com.grijesh.calculator.test.calculator"
 )

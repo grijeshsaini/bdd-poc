@@ -1,6 +1,7 @@
-Feature: Calculator - POC
+Feature: Simple Calculator Operations
 
-  Scenario: Add Operation
-    Given Calculator is initialized
-    When add two variables "3" "5"
-    Then 8 should be returned
+  Scenario: Addition
+    Given Calculator is turned on
+    When I add 3
+    And add 5
+    Then result should be 8

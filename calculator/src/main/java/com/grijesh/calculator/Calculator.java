@@ -1,14 +1,23 @@
 package com.grijesh.calculator;
 
-import java.math.BigInteger;
+import lombok.Getter;
 
 /**
  * Created by grijesh on 17/10/15.
+ *
  */
-public interface Calculator<T extends Number> {
+@Getter
+public class Calculator {
 
-    public T add(T a, T b);
+    private double currentState = 0;
 
-    public T subtract(T a , T b);
+    public void add(Number a) {
+        currentState += a.doubleValue();
+    }
+
+    public Number subtract(Number a) {
+        return null;
+    }
+
 
 }
