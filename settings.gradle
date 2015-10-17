@@ -1,0 +1,4 @@
+rootProject.name = 'bdd-poc'
+
+include 'calculator'
+
