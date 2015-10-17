@@ -1,7 +1,11 @@
 Feature: Simple Calculator Operations
 
-  Scenario: Addition
+  Scenario Outline: Addition
     Given Calculator is turned on
-    When I add 3
-    And add 5
-    Then result should be 8
+    When I add <first>
+    And add <second>
+    Then result should be <result>
+    Examples:
+    | first | second | result |
+    | 3     | 4      | 7      |
+    | 10    | 5      | 15     |
