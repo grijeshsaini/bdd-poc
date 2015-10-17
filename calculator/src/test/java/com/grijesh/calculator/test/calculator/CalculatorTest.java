@@ -9,7 +9,7 @@ import org.junit.Assert;
 /**
  * Created by grijesh on 17/10/15.
  */
-public class TestAddOperation {
+public class CalculatorTest {
 
     private Calculator calculator;
 
@@ -18,19 +18,30 @@ public class TestAddOperation {
        calculator = new Calculator();
     }
 
-    @When("^I add (\\d+)$")
+    @Given("^reset calculator$")
+    public void resetCurrentState() throws Throwable{
+        calculator.setCurrentState(0);
+    }
+
+    @When("^I add (.+)$")
     public void addFirst(int firstNumber) throws Throwable {
         calculator.add(firstNumber);
     }
 
-    @When("^add (\\d+)$")
+    @When("^add (.+)$")
     public void addSecond(int secondNumber) throws Throwable {
         calculator.add(secondNumber);
     }
 
-    @Then("^result should be (\\d+)$")
+    @Then("^result should be (.+)$")
     public void result_should_be(int result) throws Throwable {
         Assert.assertTrue(calculator.getCurrentState()== result);
+    }
+
+    @When("^subtract (.+)$")
+    //Replaced \\d+ to .+ to support double or float number
+    public void subtract(int number) throws Throwable {
+        calculator.subtract(number);
     }
 
 }
