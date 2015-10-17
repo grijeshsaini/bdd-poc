@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         monochrome = true,
         features = "src/test/resources/features/",
-        plugin = {"pretty", "json:target/"},
+        plugin = {"pretty", "html:build/results"},
         dryRun = false,
         glue = "com.grijesh.calculator.test.calculator"
 )
