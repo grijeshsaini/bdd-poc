@@ -21,8 +21,6 @@ class CalculatorTest extends ScalaDsl with EN{
     calc add b
   }
   Then("""^result should be (.+)$"""){ (result:Double) =>
-    println(result)
-    println(calc.result)
     assertTrue(calc.result.equals(result))
   }
   When("""^subtract (.+)$"""){ (a:Double) =>
