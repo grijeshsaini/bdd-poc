@@ -1,2 +1,1 @@
-#### Repository to learn Behaviour Driven Development using Cucumber
-##### Execute ./gradlew clean build command to build the project
+#### Repository to learn Behaviour Driven Development using Cucumber with java and scala
